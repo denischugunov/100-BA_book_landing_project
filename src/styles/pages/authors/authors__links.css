@@ -1,0 +1,20 @@
+.authors__links {
+  display: flex;
+  gap: 20px;
+}
+
+.authors__links-button {
+  background-color: #7cf652;
+}
+
+.authors__links-button.btn {
+  color: whitblacke;
+}
+
+.authors__links-button.btn:hover {
+  color: white;
+}
+
+.authors__links-button.btn::after {
+  background-color: #7f47c7;
+}

@@ -1,0 +1,8 @@
+.header__logo {
+  inline-size: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
+}
+
+.header__logo-img {
+  inline-size: 100%;
+  block-size: auto;
+}

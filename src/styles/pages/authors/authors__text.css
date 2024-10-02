@@ -1,0 +1,11 @@
+.authors__text {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.authors__text-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

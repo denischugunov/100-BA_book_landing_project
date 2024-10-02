@@ -1,0 +1,65 @@
+/* In this file, some basic styles are already written that reset or modify the default browser behavior.
+There is also a utility class called visually-hidden in case you need to hide an element while keeping it accessible for screen readers. */
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.page {
+  margin: 0 auto;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

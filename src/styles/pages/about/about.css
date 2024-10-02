@@ -1,0 +1,94 @@
+@import url("./book-img/book-animated.css");
+@import url("./about__authors.css");
+@import url("./about__description.css");
+@import url("./about__name.css");
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 23%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "name name name"
+    "img description author"
+    "img description link-btn";
+  gap: 15px;
+  padding-inline-start: 6%;
+  padding-inline-end: 6%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .animated-wrapper {
+    inline-size: 100%;
+    align-self: center;
+    perspective: 200vw;
+  }
+}
+
+
+.about::before {
+  content: "";
+  background-image: radial-gradient(circle, #09ff00, rgba(9, 255, 0, 0) 50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  inline-size: 100%;
+  block-size: 120vh;
+  z-index: -1;
+  top: -10%;
+  left: -40%;
+  overflow: visible;
+}
+
+@media (min-width: 1591px) {
+  .about {
+    padding-left: calc(50vw - 700px);
+    padding-right: calc(50vw - 700px);
+  }
+}
+
+.about__name {
+  grid-area: name;
+}
+
+.animated-wrapper {
+  grid-area: img;
+}
+
+.about__description {
+  grid-area: description;
+}
+
+.about__authors {
+  grid-area: author;
+}
+
+.about_link-button {
+  grid-area: link-btn;
+}
+
+.about_link-button {
+  justify-self: center;
+  align-self: center;
+  background-color: #7cf652;
+}
+
+.about_link-button.btn {
+  color: black;
+}
+
+.about_link-button.btn:hover {
+  color: white;
+}
+
+.about_link-button.btn::after {
+  background-color: #7f47c7;
+}

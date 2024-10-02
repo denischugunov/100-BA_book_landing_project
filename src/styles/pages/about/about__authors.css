@@ -1,0 +1,12 @@
+.about__authors {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__authors-name {
+  font-size: 1rem;
+}
+
+.about__authors-desription {
+  font-size: 0.8rem;
+}

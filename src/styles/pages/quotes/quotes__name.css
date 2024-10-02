@@ -1,0 +1,13 @@
+.quotes__name {
+  padding-top: 70px;
+  display: block;
+  padding-inline-start: 6%;
+  padding-inline-end: 6%;
+}
+
+@media (min-width: 1591px) {
+  .quotes__name {
+    padding-left: calc(50vw - 700px);
+    padding-right: calc(50vw - 700px);
+  }
+}

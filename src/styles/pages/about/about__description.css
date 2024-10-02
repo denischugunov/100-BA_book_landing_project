@@ -1,0 +1,10 @@
+.about__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about__description_title {
+  font-style: italic;
+  font-size: 2rem;
+}

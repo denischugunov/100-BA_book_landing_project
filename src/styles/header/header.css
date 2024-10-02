@@ -1,0 +1,17 @@
+@import url("./header__logo.css");
+@import url("./header__nav.css");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 6%;
+  padding-inline-end: 6%;
+}
+
+@media (min-width: 1591px) {
+  .header {
+    padding-left: calc(50vw - 700px);
+    padding-right: calc(50vw - 700px);
+  }
+}

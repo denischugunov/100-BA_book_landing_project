@@ -1,0 +1,22 @@
+.name-animated {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  inline-size: fit-content;
+}
+
+.name-animated::before {
+  content: "";
+  background: linear-gradient(90deg, rgb(127, 71, 199, 0.5), rgb(124, 246, 82, 0.5));
+  position: absolute;
+  inline-size: 100%;
+  block-size: 50%;
+  left: -100%;
+  bottom: 0%;
+  z-index: -1;
+  transition: left 1s ease-in-out;
+}
+
+.name-animated.active::before {
+  left: 0%;
+}

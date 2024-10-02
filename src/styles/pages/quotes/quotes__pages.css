@@ -1,0 +1,27 @@
+.quotes__pages {
+  display: flex;
+  overflow-x: scroll; /* Добавляем горизонтальный скролл */
+  overflow-y: hidden; /* Скрываем вертикальный скролл (если он есть) */
+  white-space: nowrap; /* Не переносим элементы на новую строку */
+  -ms-overflow-style: none; /* Скрываем скроллбар в IE и Edge */
+  scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+  gap: 40px;
+  padding: 50px 0;
+}
+
+.quotes__pages::-webkit-scrollbar {
+  display: none; /* Скрываем скроллбар в Webkit браузерах (Chrome, Safari) */
+}
+
+.quotes__page {
+  display: block;
+  width: 25%;
+  min-width: 300px;
+  flex-shrink: 0;
+  cursor: zoom-in;
+}
+
+.quotes__page-img {
+  width: 100%;
+  height: 100%;
+}

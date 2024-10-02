@@ -1,0 +1,22 @@
+@import url("../fonts/fonts.css");
+@import url("./global.css");
+@import url("./header/header.css");
+@import url("./pages/about/about.css");
+@import url("./pages/features/features.css");
+@import url("./pages/quotes/quotes.css");
+@import url("./pages/authors/authors.css");
+@import url("./pages/stories/stories.css");
+@import url("./pages/course/course.css");
+@import url("./footer/footer.css");
+@import url("./common/btn.css");
+@import url("./common/name.css");
+
+:root {
+  --accent-color: #7cf652;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #121212;
+  }
+}

@@ -1,0 +1,73 @@
+.course {
+  padding-inline: 6%;
+  padding-top: 25vh;
+  padding-bottom: 15vh;
+  position: relative;
+}
+
+.course::after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  inline-size: 100vw;
+  block-size: 90px;
+  background: url("../../../images/vector-wrapper.svg") no-repeat center/cover;
+}
+
+@media (min-width: 1591px) {
+  .course {
+    padding-left: calc(50vw - 700px);
+    padding-right: calc(50vw - 700px);
+  }
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  .course::after {
+    background: url("../../../images/vector-wrapper-black.svg") no-repeat center/cover;
+  }
+}
+
+/* Светлая тема */
+@media (prefers-color-scheme: light) {
+  .course::after {
+    background: url("../../../images/vector-wrapper.svg") no-repeat center/cover;
+  }
+}
+
+
+.course__wrapper {
+  position: absolute;
+  background-image: url("../../../images/pattern-bg-smile.png");
+  filter: opacity(0.5);
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.course__name {
+  margin-bottom: 50px;
+}
+
+.course__text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course__text-ol {
+  line-height: 1.3rem;
+}
+
+.course__text-li::before {
+  content: "•";
+  margin-right: 10px;
+  line-height: 1.4rem;
+}

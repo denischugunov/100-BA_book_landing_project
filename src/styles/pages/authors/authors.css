@@ -1,0 +1,46 @@
+@import url("./authots__images.css");
+@import url("./authors__links.css");
+@import url("./authors__text.css");
+
+.authors {
+  margin-top: 100px;
+  padding-inline-start: 6%;
+  padding-inline-end: 6%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.authors::after,
+.authors::before {
+  content: "";
+  background-image: url("../../../images/brain-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: 180px;
+  block-size: 150px;
+  position: absolute;
+  z-index: -1;
+  transition: transform 0.1s ease-out;
+}
+
+.authors::after {
+  top: 75%;
+  left: 60%;
+  transform: var(--after-transform, translateY(0) translateX(0) rotate(-15deg));
+}
+
+.authors::before {
+  top: 5%;
+  left: 5%;
+  transform: var(--before-transform, translateY(0) translateX(0) rotate(25deg));
+}
+
+@media (min-width: 1591px) {
+  .authors {
+    padding-left: calc(50vw - 700px);
+    padding-right: calc(50vw - 700px);
+  }
+}

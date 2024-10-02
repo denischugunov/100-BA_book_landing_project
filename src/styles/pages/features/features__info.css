@@ -1,0 +1,30 @@
+.features__info {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  inline-size: 70%;
+}
+
+.features__info-body {
+  display: flex;
+  gap: 25px;
+}
+
+.features__info-img {
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.features__info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  line-height: 1.3rem;
+}
+
+.features__info-li::before {
+  content: "•";
+  margin-right: 10px;
+
+  line-height: 1.4rem;
+}
