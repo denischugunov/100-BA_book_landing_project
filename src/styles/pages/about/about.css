@@ -15,7 +15,6 @@
   padding-inline-start: 6%;
   padding-inline-end: 6%;
   position: relative;
-  overflow: hidden;
 }
 
 .about::before {
@@ -34,25 +33,6 @@
   block-size: 100%;
   z-index: -1;
   left: -50%;
-}
-
-.about::after {
-  content: "";
-  background-image: radial-gradient(
-    circle closest-side,
-    var(--accent-blue-color, #7f47c7),
-    transparent
-  );
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: block;
-  position: absolute;
-  inline-size: 100%;
-  block-size: 90%;
-  z-index: -1;
-  top: 20%;
-  left: 50%;
 }
 
 @media (min-width: 1591px) {
@@ -105,11 +85,6 @@
     display: flex;
     flex-direction: column;
     gap: 5%;
-  }
-
-  .about::after {
-    top: -27%;
-    left: 30%;
   }
 
   .animated-wrapper {

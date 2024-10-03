@@ -21,7 +21,7 @@
   cursor: zoom-in;
   border: 1px solid transparent;
   border-radius: 15px;
- 
+ overflow: hidden;
 }
 
 .quotes__page-img {
