@@ -15,6 +15,7 @@
   padding-inline-start: 6%;
   padding-inline-end: 6%;
   position: relative;
+  overflow: hidden;
 }
 
 .about::before {
@@ -33,8 +34,6 @@
   block-size: 100%;
   z-index: -1;
   left: -50%;
-  overflow-y: visible;
-  overflow-x: hidden;
 }
 
 .about::after {
@@ -50,11 +49,10 @@
   display: block;
   position: absolute;
   inline-size: 100%;
-  block-size: 100%;
+  block-size: 90%;
   z-index: -1;
-  top: -40%;
+  top: 20%;
   left: 50%;
-  overflow-x: hidden;
 }
 
 @media (min-width: 1591px) {
@@ -107,6 +105,11 @@
     display: flex;
     flex-direction: column;
     gap: 5%;
+  }
+
+  .about::after {
+    top: -27%;
+    left: 30%;
   }
 
   .animated-wrapper {

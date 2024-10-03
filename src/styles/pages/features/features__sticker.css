@@ -17,7 +17,6 @@
   block-size: 100%;
   transform: translateX(var(--horizontal-shift, 0)); /* Применяем смещение */
   transition: transform 0.1s ease-out; /* Можно добавить плавный переход */
-  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -53,5 +52,4 @@
 
 .features__sticker-frame-button.btn::after {
   background-color: var(--accent-green-color, #7cf652);
-  overflow-x: hidden;
 }

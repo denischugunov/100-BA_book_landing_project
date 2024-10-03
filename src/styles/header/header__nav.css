@@ -47,9 +47,8 @@
     padding: 5px;
     box-shadow: 2px 2px 2px var(--accent-blue-color, #7950ff);
     text-align: end;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: all 0.5s ease-in-out;
-
   }
 
   .header__nav-list.active {

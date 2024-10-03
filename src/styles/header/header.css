@@ -9,6 +9,7 @@
   padding-block-start: 3vh;
   padding-inline-start: 6%;
   padding-inline-end: 6%;
+  block-size: fit-content;
 }
 
 @media (min-width: 1591px) {

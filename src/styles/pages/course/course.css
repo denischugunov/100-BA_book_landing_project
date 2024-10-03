@@ -3,6 +3,7 @@
   padding-top: 25vh;
   padding-bottom: 15vh;
   position: relative;
+  overflow: hidden;
 }
 
 .course::after {
@@ -14,7 +15,6 @@
   inline-size: 100vw;
   block-size: 90px;
   background: url("../../../images/vector-wrapper.svg") no-repeat center/cover;
-  overflow-x: hidden;
 }
 
 @media (min-width: 1591px) {
@@ -36,6 +36,7 @@
   top: 0%;
   left: 0;
   z-index: -2;
+  
 }
 
 .course__name {
