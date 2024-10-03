@@ -5,25 +5,12 @@
 .quotes {
   background: linear-gradient(90deg, #7f47c7, #f436f8, #46ffff, #7cf652);
   position: relative;
-  margin-top: 200px;
+  margin-top: 13vh;
   padding-inline-start: 2%;
   padding-inline-end: 2%;
 }
 
-.quotes::before {
-  content: "";
-  background-image: url("../../../images/border-circle-white.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  bottom: 97%;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 55px;
-}
-
+.quotes::before,
 .quotes::after {
   content: "";
   background-image: url("../../../images/border-circle-white.svg");
@@ -31,31 +18,17 @@
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 97%;
   left: 0;
   display: block;
   width: 100%;
   height: 55px;
 }
 
-/* Темная тема */
-@media (prefers-color-scheme: dark) {
-  .quotes::before {
-    background-image: url("../../../images/border-circle-black.svg");
-  }
-
-  .quotes::after {
-    background-image: url("../../../images/border-circle-black.svg");
-  }
+.quotes::before {
+  bottom: 97%;
 }
 
-/* Светлая тема */
-@media (prefers-color-scheme: light) {
-  .quotes::before {
-    background-image: url("../../../images/border-circle-white.svg");
-  }
-
-  .quotes::after {
-    background-image: url("../../../images/border-circle-white.svg");
-  }
+.quotes::after {
+  top: 97%;
 }
+

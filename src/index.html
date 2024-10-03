@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="<%=require('./images/favicon.ico')%>" sizes="any" />
-    <!-- <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" /> -->
+    <link
+      rel="icon"
+      href="<%=require('./images/logo-and-favicon.svg')%>"
+      type="image/svg+xml"
+      sizes="any"
+    />
     <link rel="apple-touch-icon" href="<%=require('./images/favicon.png')%>" />
     <title>100 Business Analysis Wisdoms I Want My Kid To Know</title>
   </head>
@@ -14,12 +18,13 @@
       <a class="header__logo" href="#">
         <img
           class="header__logo-img"
-          src="<%=require('./images/logo.png')%>"
+          src="<%=require('./images/logo-and-favicon.svg')%>"
           alt="Logo featuring a mother and child"
         />
       </a>
       <nav class="header__nav">
-        <ul class="header__nav-list">
+        <div class="header-btn burger-menu" id="burgerMenuBtn"></div>
+        <ul class="header__nav-list" id="burgerMenu">
           <li><a class="header__nav-item" href="#about">About</a></li>
           <li><a class="header__nav-item" href="#features">Features</a></li>
           <li><a class="header__nav-item" href="#quotes">Quotes</a></li>
@@ -89,9 +94,7 @@
             >Head of Product Execution, Business Analyst and mom</span
           >
           <h3 class="about__authors-name">Eugenia Karol,</h3>
-          <span class="about__authors-desription"
-            >Head of Product Execution, Business Analyst and mom</span
-          >
+          <span class="about__authors-desription">Head of BA Department</span>
         </div>
         <a
           class="about_link-button btn"
@@ -161,28 +164,49 @@
         <div class="quotes__pages">
           <article class="quotes__page">
             <img
-              src="<%=require('./images/page-example-test.png')%>"
+              src="<%=require('./images/BA_Wisdoms_page1.png')%>"
               alt="An example of a book fragment in the form of a scan"
               class="quotes__page-img"
             />
           </article>
           <article class="quotes__page">
             <img
-              src="<%=require('./images/page-example-test-2.png')%>"
+              src="<%=require('./images/BA_Wisdoms_page2.png')%>"
               alt="An example of a book fragment in the form of a scan"
               class="quotes__page-img"
             />
           </article>
           <article class="quotes__page">
             <img
-              src="<%=require('./images/page-example-test.png')%>"
+              src="<%=require('./images/BA_Wisdoms_page3.png')%>"
               alt="An example of a book fragment in the form of a scan"
               class="quotes__page-img"
             />
           </article>
           <article class="quotes__page">
             <img
-              src="<%=require('./images/page-example-test-2.png')%>"
+              src="<%=require('./images/BA_Wisdoms_page4.png')%>"
+              alt="An example of a book fragment in the form of a scan"
+              class="quotes__page-img"
+            />
+          </article>
+          <article class="quotes__page">
+            <img
+              src="<%=require('./images/BA_Wisdoms_page5.png')%>"
+              alt="An example of a book fragment in the form of a scan"
+              class="quotes__page-img"
+            />
+          </article>
+          <article class="quotes__page">
+            <img
+              src="<%=require('./images/BA_Wisdoms_page6.png')%>"
+              alt="An example of a book fragment in the form of a scan"
+              class="quotes__page-img"
+            />
+          </article>
+          <article class="quotes__page">
+            <img
+              src="<%=require('./images/BA_Wisdoms_page7.png')%>"
               alt="An example of a book fragment in the form of a scan"
               class="quotes__page-img"
             />
@@ -190,36 +214,52 @@
         </div>
       </section>
       <section class="authors" id="authors">
-        <div class="authors__text">
-          <h2 class="authors__text-name name-animated">About Authors</h2>
-          <div class="authors__text-description">
-            <span class="authors__text-paragraph"
-              >Have you ever wondered how early we can begin teaching kids
-              valuable life lessons?</span
-            >
-            <span class="authors__text-paragraph"
-              >This heartwarming and insightful book takes you on a 100-day
-              journey where a mother shares practical advice, usually reserved
-              for business and management, with her 9-year-old daughter. Through
-              relatable, everyday examples, these complex concepts come to life
-              in a fun and simple way that children can easily understand.</span
-            >
-            <span class="authors__text-paragraph"
-              >From handling frustration and embracing creativity to managing
-              time and focusing on what truly matters, each day brings a new
-              piece of wisdom — designed not only for kids but with adults in
-              mind too. What began as a challenge to teach valuable lessons to a
-              child turned into a reflection for the author herself, revealing
-              that these timeless truths are relevant at any age.</span
-            >
-            <span class="authors__text-paragraph"
-              >This book is a collection of those 100 lessons, simplified and
-              made engaging for children, but just as meaningful for parents,
-              teachers, and anyone eager to learn and grow. Whether you're
-              looking to share life advice with your kids or find reminders for
-              your own journey, this book offers ideas and inspiration for
-              everyone.</span
-            >
+        <h2 class="authors__name name-animated">About Authors</h2>
+        <div class="authors__content-wrapper">
+          <div class="authors__text">
+            <div class="authors__text-description">
+              <span class="authors__text-paragraph"
+                >Have you ever wondered how early we can begin teaching kids
+                valuable life lessons?</span
+              >
+              <span class="authors__text-paragraph"
+                >This heartwarming and insightful book takes you on a 100-day
+                journey where a mother shares practical advice, usually reserved
+                for business and management, with her 9-year-old daughter.
+                Through relatable, everyday examples, these complex concepts
+                come to life in a fun and simple way that children can easily
+                understand.</span
+              >
+              <span class="authors__text-paragraph"
+                >From handling frustration and embracing creativity to managing
+                time and focusing on what truly matters, each day brings a new
+                piece of wisdom — designed not only for kids but with adults in
+                mind too. What began as a challenge to teach valuable lessons to
+                a child turned into a reflection for the author herself,
+                revealing that these timeless truths are relevant at any
+                age.</span
+              >
+              <span class="authors__text-paragraph"
+                >This book is a collection of those 100 lessons, simplified and
+                made engaging for children, but just as meaningful for parents,
+                teachers, and anyone eager to learn and grow. Whether you're
+                looking to share life advice with your kids or find reminders
+                for your own journey, this book offers ideas and inspiration for
+                everyone.</span
+              >
+            </div>
+          </div>
+          <div class="authors__images">
+            <img
+              src="<%=require('./images/author_ks.png')%>"
+              alt="author's image"
+              class="authors__images-img authors__images-img_ks"
+            />
+            <img
+              src="<%=require('./images/author_eug.png')%>"
+              alt="author's image"
+              class="authors__images-img authors__images-img_eug"
+            />
           </div>
           <div class="authors__links">
             <a class="authors__links-button btn" href="#" target="_blank"
@@ -233,18 +273,6 @@
               ><span class="btn__text-wrapper">Buy our book on Amazon</span></a
             >
           </div>
-        </div>
-        <div class="authors__images">
-          <img
-            src="<%=require('./images/author_ks.png')%>"
-            alt="author's image"
-            class="authors__images-img authors__images-img_ks"
-          />
-          <img
-            src="<%=require('./images/author_eug.png')%>"
-            alt="author's image"
-            class="authors__images-img authors__images-img_eug"
-          />
         </div>
       </section>
       <section class="stories" id="stories">
@@ -303,19 +331,36 @@
         <div class="course__wrapper"></div>
         <h2 class="course__name">Creative C for Business Analysts</h2>
         <div class="course__text-box">
-          <span class="course__text-header">Business Analysis can be very serious yet fun! Let’s explore some areas together</span>
+          <span class="course__text-header"
+            >Business Analysis can be very serious yet fun! Let’s explore some
+            areas together</span
+          >
           <ol class="course__text-ol">
-            <li class="course__text-li">Easy-to-understand lessons for kids that apply to everyday life</li>
-            <li class="course__text-li">Real-life examples to help children and adults grasp key concepts</li>
-            <li class="course__text-li">A perfect family read that sparks meaningful conversations</li>
-            <li class="course__text-li">Teaches important values like resilience, creativity, and teamwork</li>
-            <li class="course__text-li">A timeless resource for parents looking to share wisdom with their children</li>
+            <li class="course__text-li">
+              Easy-to-understand lessons for kids that apply to everyday life
+            </li>
+            <li class="course__text-li">
+              Real-life examples to help children and adults grasp key concepts
+            </li>
+            <li class="course__text-li">
+              A perfect family read that sparks meaningful conversations
+            </li>
+            <li class="course__text-li">
+              Teaches important values like resilience, creativity, and teamwork
+            </li>
+            <li class="course__text-li">
+              A timeless resource for parents looking to share wisdom with their
+              children
+            </li>
           </ol>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <span class="footer__text">Developed by <a href="mailto:denis.chugunov98@gmail.com">Denis Chugunov</a></span>
+      <span class="footer__text"
+        >Developed by
+        <a href="mailto:denis.chugunov98@gmail.com">Denis Chugunov</a></span
+      >
       <span class="footer__text">© 2024</span>
     </footer>
     <div class="popup-image">

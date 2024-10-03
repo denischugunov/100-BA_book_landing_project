@@ -19,12 +19,26 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  line-height: 1.3rem;
+  list-style: none;
 }
 
 .features__info-li::before {
   content: "•";
   margin-right: 10px;
+}
 
-  line-height: 1.4rem;
+@media (max-width: 768px) {
+  .features__info-body {
+    flex-direction: column-reverse;
+  }
+
+  .features__info-img-container {
+    inline-size: 60%;
+    max-inline-size: 200px;
+    margin: auto;
+  }
+
+  .features__info {
+    inline-size: 100%;
+  }
 }

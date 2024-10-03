@@ -1,6 +1,7 @@
-/* In this file, some basic styles are already written that reset or modify the default browser behavior.
-There is also a utility class called visually-hidden in case you need to hide an element while keeping it accessible for screen readers. */
-
+:root {
+  --accent-green-color: #7cf652;
+  --accent-blue-color: #7950ff;
+}
 
 *,
 *::after,
@@ -11,9 +12,9 @@ There is also a utility class called visually-hidden in case you need to hide an
 .page {
   margin: 0 auto;
   min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 1.2rem;
+  min-block-size: 100vh;
+  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: clamp(1rem, 0.9515rem + 0.2071vw, 1.2rem);
 }
 
 h1,
@@ -30,8 +31,25 @@ li {
   padding: 0;
 }
 
+ol, li, ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: clamp(3rem, 2.7573rem + 1.0356vw, 4rem);
+}
+
 h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 1.7573rem + 1.0356vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 0.9515rem + 0.2071vw, 1.2rem);
+}
+
+p,
+span {
+  line-height: 1.3rem;
 }
 
 a {
@@ -47,19 +65,4 @@ input {
   padding: 0;
   background-color: transparent;
   border: none;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
 }

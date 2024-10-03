@@ -30,11 +30,11 @@
   content: "";
   display: block;
   position: absolute;
-  top: -200px;
+  top: -15vh;
   left: 0;
   background-image: url("../../../images/border_line.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   inline-size: 100%;
   block-size: 80px;
 }

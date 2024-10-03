@@ -1,5 +1,14 @@
 import "./styles/index.css";
 
+const burgerMenuBtn = document.querySelector("#burgerMenuBtn");
+const burgerMenu = document.querySelector("#burgerMenu");
+
+burgerMenuBtn.addEventListener("click", (evt) => {
+  burgerMenuBtn.classList.toggle("active");
+  burgerMenu.classList.toggle("active");
+});
+
+
 // Получаем элемент книги
 const bookElement = document.querySelector(".book-animated");
 const bookSticker = document.querySelector(".book-animated__sticker");
@@ -43,12 +52,25 @@ window.addEventListener("scroll", function () {
 const quotesPages = document.querySelector(".quotes__pages");
 
 quotesPages.addEventListener("wheel", (event) => {
+  const maxScrollLeft = quotesPages.scrollWidth - quotesPages.clientWidth;
+
+  // Проверяем, достиг ли пользователь конца контейнера
+  if ((quotesPages.scrollLeft === maxScrollLeft && event.deltaY > 0) || (quotesPages.scrollLeft === 0 && event.deltaY < 0)) {
+    // Если достигнут конец или начало контейнера, не отменяем событие - стандартная вертикальная прокрутка работает
+    return;
+  }
+
+  // В остальных случаях предотвращаем стандартную прокрутку
   event.preventDefault();
+  
+  // Увеличиваем скорость горизонтальной прокрутки, умножая deltaY на 3
   quotesPages.scrollBy({
-    left: event.deltaY, // Горизонтальная прокрутка
+    left: event.deltaY * 3, // Увеличиваем скорость прокрутки
     behavior: "smooth", // Плавная прокрутка
   });
 });
+
+
 
 quotesPages.addEventListener("click", (evt) => {
   if (evt.target.classList.contains("quotes__page-img")) {

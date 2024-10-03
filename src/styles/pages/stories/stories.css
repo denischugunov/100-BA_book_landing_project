@@ -8,12 +8,12 @@
 .stories::before {
   content: "";
   position: absolute;
-  top: -200px;
+  top: -18vh;
   left: 0;
   inline-size: 100%;
   block-size: 80px;
   background: url("../../../images/border_line_green.svg") no-repeat
-    center/contain;
+    center/cover;
 }
 
 @media (min-width: 1591px) {
@@ -28,7 +28,7 @@
   justify-content: space-around;
   align-items: start;
   flex-wrap: nowrap;
-  margin: 35px 0 50px;
+  margin: 35px 0 0;
   scroll-snap-type: x mandatory; /* Привязка к ближайшему элементу */
   scroll-behavior: smooth; /* Плавная прокрутка */
   -webkit-overflow-scrolling: touch; /* Плавность на мобильных устройствах */

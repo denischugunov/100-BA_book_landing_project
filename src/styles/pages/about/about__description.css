@@ -6,5 +6,11 @@
 
 .about__description_title {
   font-style: italic;
-  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .about__description {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
 }

@@ -10,13 +10,3 @@
 @import url("./footer/footer.css");
 @import url("./common/btn.css");
 @import url("./common/name.css");
-
-:root {
-  --accent-color: #7cf652;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: #121212;
-  }
-}

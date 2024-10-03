@@ -10,3 +10,14 @@
 .about__authors-desription {
   font-size: 0.8rem;
 }
+
+@media (max-width: 768px) {
+  .about__authors {
+    padding-bottom: 50px;
+  }
+
+  .about__authors-image {
+    inline-size: 60%;
+    margin: auto;
+  }
+}

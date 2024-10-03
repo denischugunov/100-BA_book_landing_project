@@ -6,7 +6,7 @@
 .features__sticker-frame::before {
   content: "";
   position: absolute;
-  top: -330px;
+  top: -30vh;
   left: -40px;
   background-image: url("../../../images/brain-dancing.png");
   background-size: contain;
@@ -19,13 +19,27 @@
   transition: transform 0.1s ease-out; /* Можно добавить плавный переход */
 }
 
+@media (max-width: 768px) {
+  .features__sticker-frame {
+    inline-size: 80%;
+    max-inline-size: 300px;
+    padding-bottom: 40px;
+  }
+
+  .features__sticker-frame::before {
+    top: -15vh;
+    inline-size: 70%;
+    block-size: 70%;
+  }
+}
+
 .features__sticker-frame-text {
   font-size: 0.9rem;
 }
 
 .features__sticker-frame-button {
   margin-top: 20px;
-  background-color: #7f47c7;
+  background-color: var(--accent-blue-color, #7f47c7);
 }
 
 .features__sticker-frame-button.btn {
@@ -37,5 +51,5 @@
 }
 
 .features__sticker-frame-button.btn::after {
-  background-color: #7cf652;
+  background-color: var(--accent-green-color, #7cf652);
 }

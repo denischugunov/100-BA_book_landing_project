@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  padding-block-start: 3vh;
   padding-inline-start: 6%;
   padding-inline-end: 6%;
 }

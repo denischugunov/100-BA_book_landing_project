@@ -26,15 +26,10 @@
   top: 0;
   transition: left 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Анимация плавного перемещения и фона */
   z-index: 1; /* Псевдоэлемент ниже текста */
-  background-color: #7cf652; /* Фон после наведения */
+  background-color: var(--accent-green-color, #7cf652); /* Фон после наведения */
 }
 
 .btn:hover::after {
   left: 0%; /* При наведении псевдоэлемент перемещается на всю кнопку */
-}
-
-.features__sticker-frame-button {
-  margin-top: 20px;
-  background-color: #7f47c7;
 }
 

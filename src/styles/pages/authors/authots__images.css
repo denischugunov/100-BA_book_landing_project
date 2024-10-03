@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   justify-content: start;
-  align-items: center;
+  align-items: center;  
 }
 
 .authors__images-img_ks {
@@ -10,14 +10,26 @@
   transform: rotate(-8deg);
   margin-left: 15%;
   z-index: 3;
-  inline-size: 70%;
+  max-inline-size: 65%;
   block-size: auto;
+
 }
 
 .authors__images-img_eug {
   position: relative;
   transform: rotate(10deg);
   left: -40%;
-  inline-size: 70%;
+  max-inline-size: 65%;
   block-size: auto;
+}
+
+@media (max-width: 768px) {
+  .authors__images {
+    inline-size: 80%;
+    margin: auto;
+  }
+
+  .authors__images-img_ks {
+    margin-left: 7%;
+  }
 }
