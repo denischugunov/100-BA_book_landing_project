@@ -8,6 +8,7 @@
   margin-top: 13vh;
   padding-inline-start: 2%;
   padding-inline-end: 2%;
+  align-items: start;
 }
 
 .quotes::before,

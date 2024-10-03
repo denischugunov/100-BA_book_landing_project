@@ -27,9 +27,9 @@
   display: flex;
   justify-content: space-around;
   margin: 35px 0 0;
-  /* scroll-snap-type: x mandatory; Привязка к ближайшему элементу */
-  /* scroll-behavior: smooth; Плавная прокрутка
-  -webkit-overflow-scrolling: touch; Плавность на мобильных устройствах */
+  scroll-snap-type: x mandatory; /* Привязка к ближайшему элементу */
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  -webkit-overflow-scrolling: touch; /* Плавность на мобильных устройствах */
 }
 
 .stories__box::-webkit-scrollbar {

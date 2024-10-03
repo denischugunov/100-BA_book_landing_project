@@ -7,6 +7,9 @@
   scrollbar-width: none; /* Скрываем скроллбар в Firefox */
   gap: 40px;
   padding: 50px 0;
+  scroll-snap-type: x mandatory; /* Привязка к ближайшему элементу */
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  -webkit-overflow-scrolling: touch; /* Плавность на мобильных устройствах */
 }
 
 .quotes__pages::-webkit-scrollbar {
