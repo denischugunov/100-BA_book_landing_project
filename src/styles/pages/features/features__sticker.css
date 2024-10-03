@@ -52,4 +52,5 @@
 
 .features__sticker-frame-button.btn::after {
   background-color: var(--accent-green-color, #7cf652);
+  overflow-x: hidden;
 }
