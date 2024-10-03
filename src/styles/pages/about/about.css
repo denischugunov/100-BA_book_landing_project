@@ -33,7 +33,8 @@
   block-size: 100%;
   z-index: -1;
   left: -50%;
-  overflow: visible;
+  overflow-y: visible;
+  overflow-x: hidden;
 }
 
 .about::after {
