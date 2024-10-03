@@ -37,7 +37,7 @@
   overflow-x: hidden;
 }
 
-/* .about::after {
+.about::after {
   content: "";
   background-image: radial-gradient(
     circle closest-side,
@@ -54,8 +54,8 @@
   z-index: -1;
   top: -40%;
   left: 50%;
-  overflow: hidden;
-} */
+  overflow-x: hidden;
+}
 
 @media (min-width: 1591px) {
   .about {

@@ -7,7 +7,6 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .page {
