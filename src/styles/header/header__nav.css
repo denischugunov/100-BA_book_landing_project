@@ -35,9 +35,10 @@
   }
 
   .header__nav-list {
-    display: none;
+    display: flex;
     flex-direction: column;
     position: absolute;
+    opacity: 0;
     top: 100%;
     right: 6%;
     z-index: 1;
@@ -45,11 +46,17 @@
     background-color: white;
     padding: 5px;
     box-shadow: 2px 2px 2px var(--accent-blue-color, #7950ff);
+    text-align: end;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+
   }
 
   .header__nav-list.active {
     display: flex;
-    text-align: end;
+    opacity: 1;
     padding-inline-end: 20px;
+    transform: translateX(0);
+
   }
 }

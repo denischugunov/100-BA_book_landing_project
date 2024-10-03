@@ -53,7 +53,8 @@
   z-index: -1;
   top: -40%;
   left: 50%;
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 @media (min-width: 1591px) {
