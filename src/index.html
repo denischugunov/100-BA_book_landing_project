@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -89,12 +89,17 @@
             alt="photo of the book's authors"
             class="about__authors-image"
           />
-          <h3 class="about__authors-name">Ksenija Lace,</h3>
-          <span class="about__authors-desription"
-            >Head of Product Execution, Business Analyst and mom</span
-          >
-          <h3 class="about__authors-name">Eugenia Karol,</h3>
-          <span class="about__authors-desription">Head of BA Department</span>
+          <div class="about__authors-text-container">
+            <h3 class="about__authors-name">Ksenija Lace,</h3>
+            <span class="about__authors-description"
+              >Head of Product Execution, Lecturer at Riga Technical University,
+              Business Analyst in heart</span
+            >
+            <h3 class="about__authors-name">Eugenia Karol,</h3>
+            <span class="about__authors-description"
+              >BA Lead, Business Analyst in spirit</span
+            >
+          </div>
         </div>
         <a
           class="about_link-button btn"
@@ -118,6 +123,11 @@
               />
             </div>
             <div class="features__info-text">
+              <span class="features__info-description"
+                >Perfect for kids, parents, and anyone who believes in lifelong
+                learning, this book shows that the best lessons in life can be
+                shared, understood, and appreciated by all ages.</span
+              >
               <ol class="features__info-ol">
                 <li class="features__info-li">
                   Easy-to-understand lessons for kids that apply to everyday
@@ -139,15 +149,10 @@
                   their children
                 </li>
               </ol>
-              <span class="features__info-description"
-                >Perfect for kids, parents, and anyone who believes in lifelong
-                learning, this book shows that the best lessons in life can be
-                shared, understood, and appreciated by all ages.</span
-              >
             </div>
           </div>
         </div>
-        <article class="features__sticker-frame">
+        <div class="features__sticker-frame">
           <h3 class="features__sticker-frame-logo">Love stickers as well?</h3>
           <span class="features__sticker-frame-text"
             >We created our sticker pack for you to enjoy!</span
@@ -158,10 +163,21 @@
             target="_blank"
             ><span class="btn__text-wrapper">Telegram sticker set</span></a
           >
-        </article>
+        </div>
+      </section>
+      <section class="video">
+        <iframe
+          class="video__frame"
+          src="https://www.youtube.com/embed/U4T8fOT1yU4?si=67vU4X0_bx874Jlk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </section>
       <section class="quotes" id="quotes">
-        <h2 class="quotes__name">Some pages/ Quotes</h2>
+        <h2 class="quotes__name">Look Inside</h2>
         <div class="quotes__pages">
           <article class="quotes__page">
             <img
@@ -221,61 +237,54 @@
         <div class="authors__content-wrapper">
           <div class="authors__text">
             <div class="authors__text-description">
+              <h3 class="authors__text-name">Ksenija</h3>
               <span class="authors__text-paragraph"
-                >Have you ever wondered how early we can begin teaching kids
-                valuable life lessons?</span
+                >Ksenija is all about turning complex challenges into simple,
+                actionable solutions. As a leader in product execution, she’s
+                always focused on making things clear and straightforward. While
+                she loves guiding teams to success, teaching at university is
+                her passion project on the side, where she shares her knowledge
+                and love for learning.</span
+              >
+              <h3 class="authors__text-name">Eugenia</h3>
+              <span class="authors__text-paragraph"
+                >Eugenia’s world is driven by creativity. She’s a natural at
+                bringing fresh, imaginative ideas into business analysis, always
+                finding innovative ways to solve problems. Outside of work, her
+                artistic spirit comes alive in her beautiful designs, blending
+                her love for both business and art.</span
               >
               <span class="authors__text-paragraph"
-                >This heartwarming and insightful book takes you on a 100-day
-                journey where a mother shares practical advice, usually reserved
-                for business and management, with her 9-year-old daughter.
-                Through relatable, everyday examples, these complex concepts
-                come to life in a fun and simple way that children can easily
-                understand.</span
-              >
-              <span class="authors__text-paragraph"
-                >From handling frustration and embracing creativity to managing
-                time and focusing on what truly matters, each day brings a new
-                piece of wisdom — designed not only for kids but with adults in
-                mind too. What began as a challenge to teach valuable lessons to
-                a child turned into a reflection for the author herself,
-                revealing that these timeless truths are relevant at any
-                age.</span
-              >
-              <span class="authors__text-paragraph"
-                >This book is a collection of those 100 lessons, simplified and
-                made engaging for children, but just as meaningful for parents,
-                teachers, and anyone eager to learn and grow. Whether you're
-                looking to share life advice with your kids or find reminders
-                for your own journey, this book offers ideas and inspiration for
-                everyone.</span
+                >Together, Ksenija and Eugenia combine their
+                superpowers—simplicity and creativity—to bring you “100 Business
+                Analysis Wisdoms I Want My Kid To Know,” a fun, insightful guide
+                designed to inspire analysts at every level.</span
               >
             </div>
           </div>
           <div class="authors__images">
             <img
-              src="<%=require('./images/author_ks.png')%>"
+              src="<%=require('./images/about_authors.png')%>"
               alt="author's image"
-              class="authors__images-img authors__images-img_ks"
-              loading="lazy"
-            />
-            <img
-              src="<%=require('./images/author_eug.png')%>"
-              alt="author's image"
-              class="authors__images-img authors__images-img_eug"
+              class="authors__images-img"
               loading="lazy"
             />
           </div>
           <div class="authors__links">
-            <a class="authors__links-button btn" href="#" target="_blank"
+            <a
+              class="authors__links-button btn"
+              href="https://www.linkedin.com/in/ksenijalace/"
+              target="_blank"
               ><span class="btn__text-wrapper"
-                >Connect with us on LinkedIn</span
+                >Connect with Ksenija on LinkedIn</span
               ></a
             ><a
               class="authors__links-button btn"
-              href="https://www.amazon.com/gp/aw/d/B0DHV3N3RR?storeType=ebooks"
+              href="https://www.linkedin.com/in/googlinka/"
               target="_blank"
-              ><span class="btn__text-wrapper">Buy our book on Amazon</span></a
+              ><span class="btn__text-wrapper"
+                >Connect with Eugenia on LinkedIn</span
+              ></a
             >
           </div>
         </div>
@@ -333,31 +342,135 @@
         </div>
       </section>
       <section class="course" id="course">
-        <div class="course__wrapper"></div>
-        <h2 class="course__name">Creative C for Business Analysts</h2>
-        <div class="course__text-box">
-          <span class="course__text-header"
-            >Business Analysis can be very serious yet fun! Let’s explore some
-            areas together</span
-          >
-          <ol class="course__text-ol">
-            <li class="course__text-li">
-              Easy-to-understand lessons for kids that apply to everyday life
-            </li>
-            <li class="course__text-li">
-              Real-life examples to help children and adults grasp key concepts
-            </li>
-            <li class="course__text-li">
-              A perfect family read that sparks meaningful conversations
-            </li>
-            <li class="course__text-li">
-              Teaches important values like resilience, creativity, and teamwork
-            </li>
-            <li class="course__text-li">
-              A timeless resource for parents looking to share wisdom with their
-              children
-            </li>
-          </ol>
+        <div class="course__tags_blue">
+          <div class="course__tags-container_blue">
+            <span class="tag">Persuasive Negotiations</span>
+            <span class="tag">Solid Arguments</span>
+            <span class="tag">Connection Mastery</span>
+            <span class="tag">Active Listening</span>
+            <span class="tag">Critical Thinking</span>
+            <span class="tag">Stakeholder Engagement</span>
+            <span class="tag">Creative Problem-Solving</span>
+            <span class="tag">Exceeding Expectations</span>
+            <span class="tag">Conflict Transformation</span>
+            <span class="tag">Persuasive Negotiations</span>
+            <span class="tag">Solid Arguments</span>
+            <span class="tag">Connection Mastery</span>
+            <span class="tag">Active Listening</span>
+            <span class="tag">Critical Thinking</span>
+            <span class="tag">Stakeholder Engagement</span>
+            <span class="tag">Creative Problem-Solving</span>
+            <span class="tag">Exceeding Expectations</span>
+            <span class="tag">Conflict Transformation</span>
+          </div>
+        </div>
+        <div class="course__tags_green">
+          <div class="course__tags-container_green">
+            <span class="tag">Risk Anticipation</span>
+            <span class="tag">Clear Communication</span>
+            <span class="tag">Feedback Mastery</span>
+            <span class="tag">Process Optimization</span>
+            <span class="tag">Context Decoding</span>
+            <span class="tag">Effective Delegation</span>
+            <span class="tag">Effortless Collaboration</span>
+            <span class="tag">Storytelling for Influence</span>
+            <span class="tag">Insightful Decision-Making</span>
+            <span class="tag">Risk Anticipation</span>
+            <span class="tag">Clear Communication</span>
+            <span class="tag">Feedback Mastery</span>
+            <span class="tag">Process Optimization</span>
+            <span class="tag">Context Decoding</span>
+            <span class="tag">Effective Delegation</span>
+            <span class="tag">Effortless Collaboration</span>
+            <span class="tag">Storytelling for Influence</span>
+            <span class="tag">Insightful Decision-Making</span>
+          </div>
+        </div>
+        <div class="course__content">
+          <div class="course__content_text">
+            <h2 class="course__name">
+              Business Analysis Courses for Real Results
+            </h2>
+            <div class="course__text-box">
+              <span class="course__text-header"
+                >Do you sometimes feel that, despite having perfectly crafted
+                requirements, nothing moves forward? Or that after a seemingly
+                successful meeting, progress just stalls? The truth is, true
+                success in business analysis isn’t only about having great
+                documentation. It’s about mastering communication,
+                collaboration, and organization—along with a healthy dose of
+                common sense. In these courses, inspired by 100 Business
+                Analysis Wisdoms, you’ll dive deeper than the book itself, with
+                practical, example-based lessons. These are the real-world
+                insights you won’t find in traditional courses or management
+                books—presented in a simple, straightforward way, making them
+                easy to apply in your day-to-day work.</span
+              >
+              <span class="course__text-header"
+                >Here are just a few things you’ll learn:</span
+              >
+              <ol class="course__text-ol">
+                <li class="course__text-li">
+                  How to influence stakeholders when logical arguments aren’t
+                  enough.
+                </li>
+                <li class="course__text-li">
+                  Getting teams to act, even when agreements seem to lose
+                  momentum.
+                </li>
+                <li class="course__text-li">
+                  Breaking down complexity using practical examples.
+                </li>
+                <li class="course__text-li">
+                  Turning everyday challenges into opportunities for real
+                  progress.
+                </li>
+              </ol>
+              <span
+                >And that’s just the beginning. These aren’t just business
+                analysis courses—they’re your guide to unlocking practical
+                wisdom that will help you turn ideas into results, and meetings
+                into meaningful action.</span
+              >
+            </div>
+          </div>
+          <div class="course__content_form">
+            <form id="myForm" action="" method="get" class="form">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Keep me posted</legend>
+                <p>
+                  <label class="form__label" for="name">Your name:</label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    placeholder="Your name"
+                  />
+                </p>
+                <p>
+                  <label class="form__label" for="email">Введите email:</label>
+                  <input
+                    class="form__input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    placeholder="Email"
+                  />
+                </p>
+                <p class="form__privacy">
+                  By providing your name and email, you agree to our
+                  <span class="form__privacy-text">Privacy Policy</span>, which
+                  outlines how we handle your data in compliance with GDPR.
+                </p>
+                <button class="form__button btn" type="submit">
+                  <span class="btn__text-wrapper">Sign up for the updates</span>
+                </button>
+              </fieldset>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -378,6 +491,22 @@
         />
         <span class="popup-image__close">✖</span>
       </div>
+    </div>
+    <div class="form__privacy-popup">
+      <h2 class="form__privacy-popup-header">Privacy Policy</h2>
+      <h3 class="form__privacy-popup-rule">Why we collect your data:</h3>
+      <p class="form__privacy-popup-text">We are collecting your name and email address to keep you informed about updates. We will only use this information for the stated purpose.</p>
+      <h3 class="form__privacy-popup-rule">How we use your data</h3>
+      <p class="form__privacy-popup-text">Your personal information will be stored securely and will not be shared with third parties without your consent, except where required by law.</p>
+      <h3 class="form__privacy-popup-rule">Your rights under GDPR:</h3>
+      <ul class="form__privacy-popup-text">
+        <li>You have the right to access, correct, or delete your data at any time.</li>
+        <li>You can request that we stop processing your data or opt out of communications at any time.</li>
+        <li>You have the right to withdraw your consent for data processing.</li>
+      </ul>
+      <h3 class="form__privacy-popup-rule">How to contact us:</h3>
+      <p class="form__privacy-popup-text">If you have any questions or wish to exercise your rights, please contact us.</p>
+      <span class="form__privacy-popup-close">✖</span>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>

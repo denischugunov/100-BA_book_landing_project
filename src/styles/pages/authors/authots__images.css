@@ -5,31 +5,6 @@
   align-items: center;  
 }
 
-.authors__images-img_ks {
-  position: relative;
-  transform: rotate(-8deg);
-  margin-left: 15%;
-  z-index: 3;
-  max-inline-size: 65%;
-  block-size: auto;
-
-}
-
-.authors__images-img_eug {
-  position: relative;
-  transform: rotate(10deg);
-  left: -40%;
-  max-inline-size: 65%;
-  block-size: auto;
-}
-
-@media (max-width: 768px) {
-  .authors__images {
-    inline-size: 80%;
-    margin: auto;
-  }
-
-  .authors__images-img_ks {
-    margin-left: 7%;
-  }
+.authors__images-img {
+  inline-size: 100%;
 }

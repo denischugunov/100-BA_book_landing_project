@@ -72,6 +72,10 @@
 }
 
 @media (max-width: 768px) {
+  .stories {
+    padding-inline: 0;
+  }
+
   .stories__box {
     overflow-x: auto;
     gap: 20vw;

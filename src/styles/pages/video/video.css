@@ -1,0 +1,17 @@
+.video {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.video__frame {
+    inline-size: 65%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .video__frame {
+        inline-size: 100%;
+    }
+}

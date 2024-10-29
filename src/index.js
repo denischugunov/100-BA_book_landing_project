@@ -8,7 +8,6 @@ burgerMenuBtn.addEventListener("click", (evt) => {
   burgerMenu.classList.toggle("active");
 });
 
-
 // Получаем элемент книги
 const bookElement = document.querySelector(".book-animated");
 const bookSticker = document.querySelector(".book-animated__sticker");
@@ -18,14 +17,14 @@ window.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
   // При прокрутке на 120px устанавливаем вращение на 15 градусов
-  if (scrollY >= 120 && scrollY < 240) {
+  if (scrollY >= 60 && scrollY < 120) {
     bookElement.style.transform = "rotateY(15deg)";
-    bookSticker.style.top = "-5%";
+    bookSticker.style.top = "-8%";
   }
   // При прокрутке на 240px устанавливаем вращение на 30 градусов
-  else if (scrollY >= 240) {
+  else if (scrollY >= 120) {
     bookElement.style.transform = "rotateY(30deg)";
-    bookSticker.style.top = "-10%";
+    bookSticker.style.top = "-12%";
   }
   // Если меньше 120px, возвращаем к исходной позиции (0 градусов)
   else {
@@ -36,7 +35,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", function () {
   const stickerFrame = document.querySelector(
-    ".features__sticker-frame::before"
+    ".features__sticker-frame::before",
   );
   const scrollPosition = window.scrollY;
 
@@ -55,22 +54,23 @@ quotesPages.addEventListener("wheel", (event) => {
   const maxScrollLeft = quotesPages.scrollWidth - quotesPages.clientWidth;
 
   // Проверяем, достиг ли пользователь конца контейнера
-  if ((quotesPages.scrollLeft === maxScrollLeft && event.deltaY > 0) || (quotesPages.scrollLeft === 0 && event.deltaY < 0)) {
+  if (
+    (quotesPages.scrollLeft === maxScrollLeft && event.deltaY > 0) ||
+    (quotesPages.scrollLeft === 0 && event.deltaY < 0)
+  ) {
     // Если достигнут конец или начало контейнера, не отменяем событие - стандартная вертикальная прокрутка работает
     return;
   }
 
   // В остальных случаях предотвращаем стандартную прокрутку
   event.preventDefault();
-  
+
   // Увеличиваем скорость горизонтальной прокрутки, умножая deltaY на 3
   quotesPages.scrollBy({
     left: event.deltaY * 3, // Увеличиваем скорость прокрутки
     behavior: "smooth", // Плавная прокрутка
   });
 });
-
-
 
 quotesPages.addEventListener("click", (evt) => {
   if (evt.target.classList.contains("quotes__page-img")) {
@@ -111,32 +111,126 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-
-document.addEventListener('scroll', () => {
+document.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
 
   // Рассчитаем изменение угла поворота в зависимости от прокрутки
-  const rotateBefore = -120 + scrollPosition * 0.05;  // Угол для ::before
-  const rotateAfter = 15 - scrollPosition * 0.05;  // Угол для ::after
+  const rotateBefore = -120 + scrollPosition * 0.05; // Угол для ::before
+  const rotateAfter = 15 - scrollPosition * 0.05; // Угол для ::after
 
   // Устанавливаем значения в CSS переменные
-  document.querySelector('.authors').style.setProperty('--before-transform', `translateY(${scrollPosition * 0.01}px) translateX(${scrollPosition * 0.02}px) rotate(${rotateBefore}deg)`);
-  document.querySelector('.authors').style.setProperty('--after-transform', `translateY(${scrollPosition * (-0.01)}px) translateX(${-scrollPosition * (0.02)}px) rotate(${rotateAfter}deg)`);
+  document
+    .querySelector(".authors")
+    .style.setProperty(
+      "--before-transform",
+      `translateY(${scrollPosition * 0.01}px) translateX(${scrollPosition * 0.02}px) rotate(${rotateBefore}deg)`,
+    );
+  document
+    .querySelector(".authors")
+    .style.setProperty(
+      "--after-transform",
+      `translateY(${scrollPosition * -0.01}px) translateX(${-scrollPosition * 0.02}px) rotate(${rotateAfter}deg)`,
+    );
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const containers = [
+    { selector: ".course__tags-container_blue", direction: "scroll-right" },
+    { selector: ".course__tags-container_green", direction: "scroll-left" },
+  ];
 
-document.addEventListener('DOMContentLoaded', function() {
-  const targets = document.querySelectorAll('.name-animated');
+  containers.forEach(({ selector, direction }) => {
+    const tagsContainer = document.querySelector(selector);
+    const totalWidth = tagsContainer.scrollWidth;
+    console.log(totalWidth);
 
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active'); // Исправлено здесь
-          }
-      });
+    // Устанавливаем анимацию для каждого контейнера с уникальной шириной и направлением
+    if (selector === ".course__tags-container_green") {
+      tagsContainer.style.animation = `${direction} ${(totalWidth / 60) * 2}s linear infinite`;
+    } else if (selector === ".course__tags-container_blue") {
+      tagsContainer.style.animation = `${direction} ${totalWidth / 60}s linear infinite`;
+    }
+
+    // Устанавливаем начальное смещение для `scroll-right`, чтобы избежать шва
+    if (direction === "scroll-right") {
+      tagsContainer.style.transform = `translateX(-100%)`;
+    }
+
+    // Устанавливаем ключевые кадры анимации для направления
+    const style = document.createElement("style");
+    style.innerHTML = `
+      @keyframes ${direction} {
+        0% {
+          transform: translateX(${direction === "scroll-right" ? "-100%" : "0"});
+        }
+        100% {
+          transform: translateX(${direction === "scroll-right" ? "0" : -totalWidth / 2 + "px"});
+        }
+      }
+    `;
+    document.head.appendChild(style);
   });
-
-  targets.forEach(targetEl => observer.observe(targetEl));
 });
 
+const privacyText = document.querySelector(".form__privacy-text");
+const privacyPopup = document.querySelector(".form__privacy-popup");
+const closePopupButton = document.querySelector(".form__privacy-popup-close");
 
+function openPrivacyPopup() {
+  privacyPopup.classList.add("opened");
+}
+
+function closePrivacyPopup() {
+  privacyPopup.classList.remove("opened");
+}
+
+privacyText.addEventListener("click", openPrivacyPopup);
+closePopupButton.addEventListener("click", closePrivacyPopup);
+
+// Закрытие попапа по клику вне области попапа
+window.addEventListener("click", (event) => {
+  if (
+    privacyPopup.classList.contains("opened") &&
+    !privacyPopup.contains(event.target) &&
+    event.target !== privacyText
+  ) {
+    closePrivacyPopup();
+  }
+});
+
+// Закрытие попапа по клавише Esc
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closePrivacyPopup();
+  }
+});
+
+document.getElementById("myForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+
+  const url =
+    "https://script.google.com/macros/s/AKfycbzr2sNWsB1M4ovanyHrBIH3sSNOOB46Q02A7v3KPxspbhr1SPtwxkOQkhrEBZu6qqYT3w/exec"; // Замените на URL вашего веб-приложения
+
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify({ name: name, email: email }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        alert("Данные успешно отправлены!");
+        // Здесь вы можете очистить форму или сделать что-то еще
+      } else {
+        alert("Произошла ошибка при отправке данных.");
+      }
+    })
+    .catch((error) => {
+      console.error("Ошибка:", error);
+      alert("Произошла ошибка при отправке данных.");
+    });
+});

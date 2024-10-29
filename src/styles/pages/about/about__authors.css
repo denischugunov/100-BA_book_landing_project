@@ -3,12 +3,19 @@
   flex-direction: column;
 }
 
+.about__authors-text-container {
+  inline-size: 80%;
+  margin: 0 auto;
+}
+
 .about__authors-name {
   font-size: 1rem;
 }
 
-.about__authors-desription {
+.about__authors-description {
+  display: block;
   font-size: 0.8rem;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
@@ -17,7 +24,11 @@
   }
 
   .about__authors-image {
-    inline-size: 60%;
+    inline-size: 85%;
     margin: auto;
+  }
+
+  .about__authors-text-container {
+    inline-size: 85%;
   }
 }

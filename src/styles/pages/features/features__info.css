@@ -36,9 +36,16 @@
     inline-size: 60%;
     max-inline-size: 200px;
     margin: auto;
+    display: flex;
+    justify-content: center;
   }
 
   .features__info {
     inline-size: 100%;
+  }
+
+  .features__info-img {
+    inline-size: 50%;
+    block-size: auto;
   }
 }

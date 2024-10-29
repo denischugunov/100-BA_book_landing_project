@@ -6,7 +6,7 @@
 .features__sticker-frame::before {
   content: "";
   position: absolute;
-  top: -30vh;
+  top: -37vh;
   left: -40px;
   background-image: url("../../../images/brain-dancing.png");
   background-size: contain;
@@ -27,7 +27,7 @@
   }
 
   .features__sticker-frame::before {
-    top: -15vh;
+    top: -10vh;
     inline-size: 70%;
     block-size: 70%;
   }

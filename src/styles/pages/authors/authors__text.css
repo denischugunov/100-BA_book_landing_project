@@ -7,5 +7,8 @@
 .authors__text-description {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.authors__text-paragraph {
+  margin-bottom: 15px;
 }

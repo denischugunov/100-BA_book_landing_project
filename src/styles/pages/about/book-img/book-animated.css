@@ -10,9 +10,10 @@
   position: relative;
   width: 100%; /* Ширина книги (обложка) */
   transform: rotateY(0deg); /* Начальная позиция книги */
-  transition: all 0.1s ease-in-out; /* Плавный переход */
+  transition: transform 0.3s ease; /* Плавный переход */
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   aspect-ratio: 3 / 4;
+
 }
 
 .book-animated__sticker {
@@ -20,6 +21,7 @@
   top: 10%;
   right: 10%;
   width: 30%;
+  transition: top 0.3s ease;
 }
 
 .book-animated__sticker-img {
