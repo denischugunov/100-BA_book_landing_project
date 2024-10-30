@@ -212,25 +212,33 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
   const email = document.getElementById("email").value;
 
   const url =
-    "https://script.google.com/macros/s/AKfycbzr2sNWsB1M4ovanyHrBIH3sSNOOB46Q02A7v3KPxspbhr1SPtwxkOQkhrEBZu6qqYT3w/exec"; // Замените на URL вашего веб-приложения
+    "https://script.google.com/macros/s/AKfycbwfQjLkkxRQgSUHNHikxqYjPP6IWxcuMqytcSdWCkhatVPW2k6LhDYJnYyCZXSjJg9y6w/exec";
 
   fetch(url, {
     method: "POST",
-    body: JSON.stringify({ name: name, email: email }),
-    headers: {
-      "Content-Type": "application/json",
-    },
+    body: new URLSearchParams({
+      name: name,
+      email: email,
+    }),
   })
     .then((response) => {
+      const btn = document.querySelector(".form__button");
+      const textBtn = btn.querySelector(".form__text-wrapper");
       if (response.ok) {
-        alert("Данные успешно отправлены!");
-        // Здесь вы можете очистить форму или сделать что-то еще
+        btn.style.backgroundColor = "#7f47c7";
+        textBtn.textContent = "Submit another form?";
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
       } else {
-        alert("Произошла ошибка при отправке данных.");
+        btn.style.backgroundColor = "#ff5733";
+        textBtn.textContent = "Oops, something went wrong";
       }
     })
     .catch((error) => {
       console.error("Ошибка:", error);
-      alert("Произошла ошибка при отправке данных.");
+      const btn = document.querySelector(".form__button");
+      const textBtn = btn.querySelector(".form__text-wrapper");
+      textBtn.textContent = "Oops, something went wrong";
+      btn.style.backgroundColor = "#ff5733";
     });
 });

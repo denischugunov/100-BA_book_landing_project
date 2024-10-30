@@ -75,7 +75,7 @@
   background-image: url("../../../images/pattern-bg-smile.png");
   background-size: contain;
   background-position: center;
-  block-size: 120%;
+  block-size: 105%;
   inline-size: 100%;
   position: absolute;
   inset: 0;
@@ -83,9 +83,6 @@
 }
 
 @media (max-width: 768px) {
-  .course {
-    padding-top: 15vh;
-  }
 
   .course__content {
     flex-direction: column;

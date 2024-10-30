@@ -27,7 +27,7 @@
   }
 
   .features__sticker-frame::before {
-    top: -10vh;
+    top: -20vh;
     inline-size: 70%;
     block-size: 70%;
   }

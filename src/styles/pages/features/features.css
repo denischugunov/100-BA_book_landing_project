@@ -27,11 +27,11 @@
 @media (max-width: 768px) {
   .features {
     flex-direction: column;
-    margin-top: 15vh;
+    margin-top: 25vh;
   }
 
   .features::before {
-    top: -10vh;
+    top: -16vh;
   }
 
   .features__info {
