@@ -11,7 +11,7 @@
   width: 100%; /* Ширина книги (обложка) */
   transform: rotateY(0deg); /* Начальная позиция книги */
   transition: transform 0.3s ease; /* Плавный переход */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 15px rgb(0 0 0 / 0.5);
   aspect-ratio: 3 / 4;
 
 }
@@ -29,7 +29,7 @@
 }
 
 .book-animated__cover {
-  background-image: url("../../../../images/book-cover-bg.png");
+  background-image: url(../../../../images/book-cover-bg.png);
   position: absolute;
   background-size: cover;
   background-position: center;
@@ -40,7 +40,7 @@
 }
 
 .book-animated__spine {
-  background-image: url("../../../../images/book-cover-spine.png");
+  background-image: url(../../../../images/book-cover-spine.png);
   position: absolute;
   background-size: cover;
   background-position: center;
@@ -53,6 +53,7 @@
 }
 
 @media (max-width: 960px) {
+
   .book-animated {
     perspective: 300vw;
   }

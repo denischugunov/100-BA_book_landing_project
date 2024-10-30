@@ -19,6 +19,7 @@
 }
 
 @media (max-width: 768px) {
+
   .about__authors {
     padding-bottom: 50px;
   }

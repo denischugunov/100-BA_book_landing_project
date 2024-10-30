@@ -1,18 +1,19 @@
-@import url("./header__logo.css");
-@import url("./header__nav.css");
+@import url(./header__logo.css);
+
+@import url(./header__nav.css);
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-block-start: 3vh;
-  padding-inline-start: 6%;
-  padding-inline-end: 6%;
+  padding-inline: 6%;
   block-size: fit-content;
 }
 
-@media (min-width: 1591px) {
+@media (width >= 1591px) {
+
   .header {
     padding-left: calc(50vw - 700px);
     padding-right: calc(50vw - 700px);

@@ -1,6 +1,8 @@
-@import url("./authots__images.css");
-@import url("./authors__links.css");
-@import url("./authors__text.css");
+@import url(./authots__images.css);
+
+@import url(./authors__links.css);
+
+@import url(./authors__text.css);
 
 .authors {
   margin-top: 100px;
@@ -26,14 +28,14 @@
 }
 
 .authors::after {
-  background-image: url("../../../images/background-sticker-books.png");
+  background-image: url(../../../images/background-sticker-books.png);
   top: 75%;
   left: 60%;
   transform: var(--after-transform, translateY(0) translateX(0) rotate(-15deg));
 }
 
 .authors::before {
-  background-image: url("../../../images/background-sticker-firecracker.png");
+  background-image: url(../../../images/background-sticker-firecracker.png);
   top: 5%;
   left: 5%;
   transform: var(--before-transform, translateY(0) translateX(0) rotate(25deg));
@@ -48,6 +50,7 @@
 }
 
 @media (min-width: 1591px) {
+
   .authors {
     padding-left: calc(50vw - 700px);
     padding-right: calc(50vw - 700px);
@@ -55,6 +58,7 @@
 }
 
 @media (max-width: 768px) {
+
   .authors__content-wrapper  {
     display: flex;
     flex-direction: column;

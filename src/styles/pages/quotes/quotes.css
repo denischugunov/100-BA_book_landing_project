@@ -1,6 +1,8 @@
-@import url("./popupImage.css");
-@import url("./quotes__name.css");
-@import url("./quotes__pages.css");
+@import url(./popupImage.css);
+
+@import url(./quotes__name.css);
+
+@import url(./quotes__pages.css);
 
 .quotes {
   background: linear-gradient(90deg, #7f47c7, #f436f8, #46ffff, #7cf652);
@@ -14,7 +16,7 @@
 .quotes::before,
 .quotes::after {
   content: "";
-  background-image: url("../../../images/border-circle-white.svg");
+  background-image: url(../../../images/border-circle-white.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

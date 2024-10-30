@@ -1,5 +1,6 @@
-@import url("./features__info.css");
-@import url("./features__sticker.css");
+@import url(./features__info.css);
+
+@import url(./features__sticker.css);
 
 .features{
   display: flex;
@@ -17,7 +18,7 @@
   position: absolute;
   top: -15vh;
   left: 0;
-  background-image: url("../../../images/border_line.svg");
+  background-image: url(../../../images/border_line.svg);
   background-repeat: no-repeat;
   background-size: cover;
   inline-size: 100%;
@@ -25,6 +26,7 @@
 }
 
 @media (max-width: 768px) {
+
   .features {
     flex-direction: column;
     margin-top: 25vh;
@@ -44,6 +46,7 @@
 }
 
 @media (min-width: 1591px) {
+
   .features {
     padding-left: calc(50vw - 700px);
     padding-right: calc(50vw - 700px);

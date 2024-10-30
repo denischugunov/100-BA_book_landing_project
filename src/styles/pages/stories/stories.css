@@ -12,11 +12,12 @@
   left: 0;
   inline-size: 100%;
   block-size: 80px;
-  background: url("../../../images/border_line_green.svg") no-repeat
+  background: url(../../../images/border_line_green.svg) no-repeat
     center/cover;
 }
 
 @media (min-width: 1591px) {
+
   .stories {
     padding-left: calc(50vw - 700px);
     padding-right: calc(50vw - 700px);
@@ -62,7 +63,7 @@
   top: -25%;
   left: -12%;
   z-index: -1;
-  background: url("../../../images/border-stories.png") no-repeat center/100%
+  background: url(../../../images/border-stories.png) no-repeat center/100%
     100%;
 }
 

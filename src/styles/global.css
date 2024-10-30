@@ -1,6 +1,6 @@
 :root {
   --accent-green-color: #7cf652;
-  --accent-blue-color: #7950ff;
+  --accent-blue-color: #7950FF;
 }
 
 *,
@@ -13,7 +13,7 @@
   margin: 0 auto;
   min-inline-size: 320px;
   min-block-size: 100vh;
-  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
   font-size: clamp(1rem, 0.9515rem + 0.2071vw, 1.2rem);
 }
 

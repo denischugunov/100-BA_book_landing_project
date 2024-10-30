@@ -1,23 +1,23 @@
 .form {
-    background-image: url("../../images/border-form.png");
+    position: relative;
+    padding: 25px;
+    background-image: url(../../images/border-form.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    position: relative;
-    padding: 25px;
 }
 
 .form__legend {
-    font-weight: bold;
     font-size: 1.6rem;
+    font-weight: bold;
     padding-top: 20px;
 }
 
 .form__fieldset {
-    border: none;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    border: none;
+    flex-direction: column;
 }
 
 .form__label {
@@ -32,11 +32,11 @@
 }
 
 .form__input {
-    border: 1px solid gray;
-    padding: 20px 20px;
-    font-size: 22px;
-    line-height: 26px;
     margin: 15px 0;
+    padding: 20px;
+    font-size: 22px;
+    border: 1px solid gray;
+    line-height: 26px;
     border-radius: 8px;
 }
 
@@ -69,16 +69,16 @@
 }
 
 .form__privacy-popup {
-    display: none; /* Скрываем попап по умолчанию */
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1000; /* Убедитесь, что попап сверху других элементов */
+    display: none; /* Скрываем попап по умолчанию */
     width: 90%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
     max-width: 500px;
     background-color: var(--accent-blue-color, #7f47c7);
-    padding: 20px;
     border: 7px solid var(--accent-green-color, #7cf652);
     border-radius: 10px;
 }
@@ -93,7 +93,7 @@
     position: absolute; /* Размещаем крестик абсолютно */
     top: 10px; /* Отступ сверху */
     right: 10px; /* Отступ справа */
-    cursor: pointer; /* Изменяем курсор на указатель */
-    font-size: 24px; /* Увеличиваем размер шрифта для крестика */
     margin: 0; /* Убираем отступы */
+    font-size: 24px; /* Увеличиваем размер шрифта для крестика */
+    cursor: pointer; /* Изменяем курсор на указатель */
 }

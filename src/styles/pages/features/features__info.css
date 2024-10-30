@@ -28,6 +28,7 @@
 }
 
 @media (max-width: 768px) {
+
   .features__info-body {
     flex-direction: column-reverse;
   }

@@ -7,7 +7,7 @@
     block-size: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(0 0 0 / 0.8);
     z-index: 2;
     opacity: 0;
     visibility: hidden;

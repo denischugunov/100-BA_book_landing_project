@@ -1,7 +1,10 @@
-@import url("./book-img/book-animated.css");
-@import url("./about__authors.css");
-@import url("./about__description.css");
-@import url("./about__name.css");
+@import url(./book-img/book-animated.css);
+
+@import url(./about__authors.css);
+
+@import url(./about__description.css);
+
+@import url(./about__name.css);
 
 .about {
   display: grid;
@@ -36,6 +39,7 @@
 }
 
 @media (min-width: 1591px) {
+
   .about {
     padding-left: calc(50vw - 700px);
     padding-right: calc(50vw - 700px);
@@ -60,9 +64,6 @@
 
 .about_link-button {
   grid-area: link-btn;
-}
-
-.about_link-button {
   justify-self: center;
   align-self: start;
   background-color: var(--accent-green-color, #7cf652);
@@ -81,6 +82,7 @@
 }
 
 @media (max-width: 768px) {
+
   .about {
     display: flex;
     flex-direction: column;

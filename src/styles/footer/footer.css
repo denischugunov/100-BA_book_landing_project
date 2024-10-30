@@ -1,15 +1,14 @@
 .footer {
-    display: flex;
     position: relative;
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    background-image: url('../../images/footer-bg.svg');
+    justify-content: center;
+    padding: 65px 0 45px;
+    color: white;
+    flex-direction: column;
+    background-image: url(../../images/footer-bg.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 65px 0 45px;
     gap: 3px;
-    color: white;
-
 }

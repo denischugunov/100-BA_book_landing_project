@@ -7,10 +7,6 @@
   background-color: #7cf652;
 }
 
-.authors__links-button.btn {
-  color: whitblacke;
-}
-
 .authors__links-button.btn:hover {
   color: white;
 }
@@ -20,6 +16,7 @@
 }
 
 @media (max-width: 768px) {
+
   .authors__links {
     flex-direction: column;
     margin: auto;

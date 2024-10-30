@@ -72,7 +72,7 @@
 .course__content::after {
   content: '';
   display: block;
-  background-image: url("../../../images/pattern-bg-smile.png");
+  background-image: url(../../../images/pattern-bg-smile.png);
   background-size: contain;
   background-position: center;
   block-size: 105%;
@@ -90,6 +90,7 @@
 }
 
 @media (min-width: 1591px) {
+
   .course__content {
     padding-left: calc(50vw - 700px);
     padding-right: calc(50vw - 700px);
@@ -118,10 +119,6 @@
 
 .authors__links-button {
   background-color: #7cf652;
-}
-
-.authors__links-button.btn {
-  color: whitblacke;
 }
 
 .authors__links-button.btn:hover {
