@@ -20,7 +20,7 @@
   padding-block-start: 5%;
   padding-block-end: 10%;
   position: relative;
-  background: linear-gradient(90deg, #7f47c7, #f436f8, #46ffff, #7cf652);
+  background: linear-gradient(90deg, rgb(127 71 199 / 0.6) 0%, rgb(244 54 248 / 0.6) 34%, rgb(70 255 255 / 0.6) 67%, rgb(124 246 82 / 0.6) 97.5%);
 }
 
 .about::before,
