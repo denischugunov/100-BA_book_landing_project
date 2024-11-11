@@ -25,7 +25,7 @@
   block-size: 80px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 811px) {
 
   .features {
     flex-direction: column;

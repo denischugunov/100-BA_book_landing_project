@@ -13,7 +13,7 @@
   inline-size: 100%;
   block-size: 80px;
   background: url(../../../images/border_line_green.svg) no-repeat
-    center/cover;
+  center/cover;
 }
 
 @media (min-width: 1591px) {
@@ -64,7 +64,7 @@
   left: -12%;
   z-index: -1;
   background: url(../../../images/border-stories.png) no-repeat center/100%
-    100%;
+  100%;
 }
 
 .stories__item-author-name {
@@ -72,7 +72,7 @@
   padding-bottom: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 924px) {
 
   .stories__box {
     overflow-x: auto;
@@ -82,8 +82,16 @@
   }
 
   .stories__item {
-    inline-size: 80%;
+    inline-size: 55%;
     flex-shrink: 0;
     padding: 20px 0;
   }
+}
+
+@media (max-width: 535px) {
+
+  .stories__item {
+    inline-size: 80%;
+  }
+
 }

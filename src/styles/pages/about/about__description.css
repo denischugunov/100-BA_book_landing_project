@@ -8,7 +8,7 @@
   font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 811px) {
 
   .about__description {
     padding-top: 60px;

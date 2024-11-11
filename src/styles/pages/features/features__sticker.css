@@ -19,7 +19,7 @@
   transition: transform 0.1s ease-out; /* Можно добавить плавный переход */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 811px) {
 
   .features__sticker-frame {
     inline-size: 80%;

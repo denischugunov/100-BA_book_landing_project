@@ -15,7 +15,7 @@
   background-color: #7f47c7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 811px) {
 
   .authors__links {
     flex-direction: column;

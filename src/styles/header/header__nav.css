@@ -29,7 +29,7 @@
   border-bottom: 3px solid var(--accent-green-color, #7cf652);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 811px) {
 
   .header-btn.burger-menu {
     display: block;

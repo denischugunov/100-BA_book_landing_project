@@ -82,7 +82,7 @@
   z-index: -1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 811px) {
 
   .course__content {
     flex-direction: column;
