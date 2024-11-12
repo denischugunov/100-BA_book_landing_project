@@ -16,6 +16,10 @@
   center/cover;
 }
 
+.stories__item-img {
+  width: 180px;
+}
+
 @media (min-width: 1591px) {
 
   .stories {
